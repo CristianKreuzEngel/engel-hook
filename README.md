@@ -29,7 +29,7 @@ Navegue até o diretório raiz da sua instalação Redmine e clone o repositóri
 cd $REDMINE_ROOT
 git clone [https://github.com/CristianKreuzEngel/engel-hook.git](https://github.com/CristianKreuzEngel/engel-hook.git) plugins/engel_webhook
 ```
-### ***2. Instale as Dependências
+### **2. Instale as Dependências**
 
 É recomendado instalar as dependências do plugin pulando os grupos de development e test para um ambiente de produção mais limpo:
 ```bash
@@ -41,13 +41,13 @@ bundle config set --local without 'development test'
 
 bundle install
 ```
-### ***3. Execute as Migrações
+### **3. Execute as Migrações**
 
 Execute o comando de migração para criar as tabelas ou estruturas de dados necessárias no banco de dados do Redmine:
 ```bash
 bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 ```
-#### ***4. Reinicie o Redmine
+#### **4. Reinicie o Redmine**
 
 Após a migração, é essencial reiniciar o servidor de aplicação do Redmine (por exemplo, Apache, Unicorn, Puma, etc.) para que o plugin seja carregado corretamente e as alterações entrem em vigor.
 
